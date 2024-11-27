@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_284a9bcc53bd7b216fe32c29973840a9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    bottom: 50px; 
+                    left: 50px; 
+                    width: 80%; 
+                    background-color: rgba(0,0,0,0.7);
+                    padding: 15px;
+                    border-radius: 5px;
+                    z-index:9999; 
+                    color: white; 
+                    font-family: Arial;">
+            <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+                Global BioPharma Innovation Clusters
+            </div>
+            <div style="font-size: 14px;">
+                Total Market Cap: $24944.4B | 
+                Public Companies: 73 | 
+                Avg YTD Return: -4.5%
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_284a9bcc53bd7b216fe32c29973840a9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_284a9bcc53bd7b216fe32c29973840a9 = L.map(
+                "map_284a9bcc53bd7b216fe32c29973840a9",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0481ab0a558f4229b14f57273452d52b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_0481ab0a558f4229b14f57273452d52b.addTo(map_284a9bcc53bd7b216fe32c29973840a9);
+        
+    
+            var feature_group_042f253077960b6aadca208db3c7ab9c = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_5a9ced90fd1c022e08cb75ffd40822bb = L.circleMarker(
+                [40.6336451, -74.25365772],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.33829923765035, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_784363b73a89ae69a59f67b376311174 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7771b0be1d37ca3fe90ec1dd66c2ff50 = $(`<div id="html_7771b0be1d37ca3fe90ec1dd66c2ff50" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>New Jersey Bio Hub</h3>                     <strong>Cancer</strong><br>                     Companies: 5<br>                     Total Patents: 979<br>                     Avg Patents: 195.8<br>                     Top Companies: Johnson & Johnson, Pfizer, Merck & Co.                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $786.3B<br>                     Avg Market Cap: $157.3B<br>                     Avg YTD Return: 12.5%                                      </div>                 </div>`)[0];
+                popup_784363b73a89ae69a59f67b376311174.setContent(html_7771b0be1d37ca3fe90ec1dd66c2ff50);
+            
+        
+
+        circle_marker_5a9ced90fd1c022e08cb75ffd40822bb.bindPopup(popup_784363b73a89ae69a59f67b376311174)
+        ;
+
+        
+    
+    
+            var circle_marker_207d2c81074317aa54f9d40a1dc4a7f0 = L.circleMarker(
+                [47.55891433333334, 7.595564499999999],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.296157859593746, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_5753703ef8c94e0dfe772dab120cb156 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_00f89be3e19bd02c1f17056415a074da = $(`<div id="html_00f89be3e19bd02c1f17056415a074da" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Basel Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 3<br>                     Total Patents: 1050<br>                     Avg Patents: 350.0<br>                     Top Companies: Novartis, Roche, Lonza Group                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $453.1B<br>                     Avg Market Cap: $151.0B<br>                     Avg YTD Return: 18.6%                                      </div>                 </div>`)[0];
+                popup_5753703ef8c94e0dfe772dab120cb156.setContent(html_00f89be3e19bd02c1f17056415a074da);
+            
+        
+
+        circle_marker_207d2c81074317aa54f9d40a1dc4a7f0.bindPopup(popup_5753703ef8c94e0dfe772dab120cb156)
+        ;
+
+        
+    
+    
+            var circle_marker_a790acdb699563f1f6b76674c8a052e7 = L.circleMarker(
+                [48.85777780000001, 2.257951766666667],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.227619568852525, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_9214470f034e8ca07b8ba442e7963a9d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_94a039da63ddcfd292437e77dabcca80 = $(`<div id="html_94a039da63ddcfd292437e77dabcca80" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Paris Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 3<br>                     Total Patents: 393<br>                     Avg Patents: 131.0<br>                     Top Companies: Sanofi, Servier, Ipsen                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $131.2B<br>                     Avg Market Cap: $65.6B<br>                     Avg YTD Return: 1.1%                                      </div>                 </div>`)[0];
+                popup_9214470f034e8ca07b8ba442e7963a9d.setContent(html_94a039da63ddcfd292437e77dabcca80);
+            
+        
+
+        circle_marker_a790acdb699563f1f6b76674c8a052e7.bindPopup(popup_9214470f034e8ca07b8ba442e7963a9d)
+        ;
+
+        
+    
+    
+            var circle_marker_9d27742f47836d53848314354be4a97c = L.circleMarker(
+                [35.6913697, 139.76841288333335],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.78056967174911, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_9e2d74ae703dfd133f52c8a95397d290 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9ed010b59431f1857671a84bd0c2735d = $(`<div id="html_9ed010b59431f1857671a84bd0c2735d" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Tokyo-Yokohama Bio Hub</h3>                     <strong>Cancer</strong><br>                     Companies: 6<br>                     Total Patents: 1063<br>                     Avg Patents: 177.2<br>                     Top Companies: Chugai Pharmaceutical, Takeda Pharmaceuticals, Daiichi Sankyo                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $13654.3B<br>                     Avg Market Cap: $2275.7B<br>                     Avg YTD Return: -2.9%                                      </div>                 </div>`)[0];
+                popup_9e2d74ae703dfd133f52c8a95397d290.setContent(html_9ed010b59431f1857671a84bd0c2735d);
+            
+        
+
+        circle_marker_9d27742f47836d53848314354be4a97c.bindPopup(popup_9e2d74ae703dfd133f52c8a95397d290)
+        ;
+
+        
+    
+    
+            var circle_marker_0a7c70806d62860077559c1fd28e55cf = L.circleMarker(
+                [37.60642668, -122.32824574000001],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.194186632943637, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_7984310ce480c96dacae2066f9c07844 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6a2baccc4b51a18cef4c7f2748f01dd1 = $(`<div id="html_6a2baccc4b51a18cef4c7f2748f01dd1" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Bay Area Bio Hub</h3>                     <strong>Cancer</strong><br>                     Companies: 5<br>                     Total Patents: 395<br>                     Avg Patents: 79.0<br>                     Top Companies: Gilead Sciences, Allogene Therapeutics, Nkarta                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $114.8B<br>                     Avg Market Cap: $23.0B<br>                     Avg YTD Return: -8.5%                                      </div>                 </div>`)[0];
+                popup_7984310ce480c96dacae2066f9c07844.setContent(html_6a2baccc4b51a18cef4c7f2748f01dd1);
+            
+        
+
+        circle_marker_0a7c70806d62860077559c1fd28e55cf.bindPopup(popup_7984310ce480c96dacae2066f9c07844)
+        ;
+
+        
+    
+    
+            var circle_marker_8e0665ce2d76f0d361437825bb40e95c = L.circleMarker(
+                [49.983630649999995, 8.161405649999999],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.697222766350929, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_cd88cbf7a9f07f3aea943b6c0a174fc3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1078e4936dc38cf4bd7dcdd8f9dbe5b2 = $(`<div id="html_1078e4936dc38cf4bd7dcdd8f9dbe5b2" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Munich Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 2<br>                     Total Patents: 317<br>                     Avg Patents: 158.5<br>                     Top Companies: BioNTech, Boehringer Ingelheim                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $28.4B<br>                     Avg Market Cap: $28.4B<br>                     Avg YTD Return: 5.5%                                      </div>                 </div>`)[0];
+                popup_cd88cbf7a9f07f3aea943b6c0a174fc3.setContent(html_1078e4936dc38cf4bd7dcdd8f9dbe5b2);
+            
+        
+
+        circle_marker_8e0665ce2d76f0d361437825bb40e95c.bindPopup(popup_cd88cbf7a9f07f3aea943b6c0a174fc3)
+        ;
+
+        
+    
+    
+            var circle_marker_91716ed09cd756ef7b3815ebf65d2eb0 = L.circleMarker(
+                [55.710028199999996, 12.51150015],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.625888075905324, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_c5613722eb1246f838a9bbe81fcef0a3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e14ee72ba2bbe1f252c3979725423b8 = $(`<div id="html_8e14ee72ba2bbe1f252c3979725423b8" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Copenhagen Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 2<br>                     Total Patents: 160<br>                     Avg Patents: 80.0<br>                     Top Companies: Genmab, Novo Nordisk                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $488.4B<br>                     Avg Market Cap: $244.2B<br>                     Avg YTD Return: -15.3%                                      </div>                 </div>`)[0];
+                popup_c5613722eb1246f838a9bbe81fcef0a3.setContent(html_8e14ee72ba2bbe1f252c3979725423b8);
+            
+        
+
+        circle_marker_91716ed09cd756ef7b3815ebf65d2eb0.bindPopup(popup_c5613722eb1246f838a9bbe81fcef0a3)
+        ;
+
+        
+    
+    
+            var circle_marker_0c6ba9dbd53ec85448eac759847ab9d0 = L.circleMarker(
+                [42.3026991, -87.89414395],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.674956686645432, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_5f1a641c672dec5cf08d027512fce9ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b927edb5d28087c5343209514c4a9b39 = $(`<div id="html_b927edb5d28087c5343209514c4a9b39" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Chicago Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 2<br>                     Total Patents: 155<br>                     Avg Patents: 77.5<br>                     Top Companies: AbbVie, Abbott                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $524.7B<br>                     Avg Market Cap: $262.4B<br>                     Avg YTD Return: 13.5%                                      </div>                 </div>`)[0];
+                popup_5f1a641c672dec5cf08d027512fce9ac.setContent(html_b927edb5d28087c5343209514c4a9b39);
+            
+        
+
+        circle_marker_0c6ba9dbd53ec85448eac759847ab9d0.bindPopup(popup_5f1a641c672dec5cf08d027512fce9ac)
+        ;
+
+        
+    
+    
+            var circle_marker_fecab1f3862d52dd00ee90be11b01146 = L.circleMarker(
+                [42.37121787692308, -71.09648001538461],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.706452593308523, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_c633e4c104c59dac167b2080234a71dc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_75d67d8fba5a97a32bae779fea613240 = $(`<div id="html_75d67d8fba5a97a32bae779fea613240" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Boston-Cambridge Bio Hub</h3>                     <strong>Cancer</strong><br>                     Companies: 13<br>                     Total Patents: 584<br>                     Avg Patents: 44.9<br>                     Top Companies: BeiGene, Blueprint Medicines, Biogen                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $429.8B<br>                     Avg Market Cap: $35.8B<br>                     Avg YTD Return: -27.8%                                      </div>                 </div>`)[0];
+                popup_c633e4c104c59dac167b2080234a71dc.setContent(html_75d67d8fba5a97a32bae779fea613240);
+            
+        
+
+        circle_marker_fecab1f3862d52dd00ee90be11b01146.bindPopup(popup_c633e4c104c59dac167b2080234a71dc)
+        ;
+
+        
+    
+    
+            var circle_marker_041bf4489244090f58ce5100eacdf300 = L.circleMarker(
+                [32.9195836, -117.16754409999999],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.7691273049062297, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_88a29e728121733e563da0cc2b35cd83 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6bc2a8e233f1e22db91b579b8126e21c = $(`<div id="html_6bc2a8e233f1e22db91b579b8126e21c" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>San Diego Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 2<br>                     Total Patents: 55<br>                     Avg Patents: 27.5<br>                     Top Companies: Fate Therapeutics, Arcturus Therapeutics                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $0.8B<br>                     Avg Market Cap: $0.4B<br>                     Avg YTD Return: -38.1%                                      </div>                 </div>`)[0];
+                popup_88a29e728121733e563da0cc2b35cd83.setContent(html_6bc2a8e233f1e22db91b579b8126e21c);
+            
+        
+
+        circle_marker_041bf4489244090f58ce5100eacdf300.bindPopup(popup_88a29e728121733e563da0cc2b35cd83)
+        ;
+
+        
+    
+    
+            var circle_marker_e970829960a925a9759b9cfb82e1704e = L.circleMarker(
+                [51.625579099999996, -1.2953887499999999],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.081293163956259, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_1a208a10377d4b13661becdc3d87858b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0fbe05efcb1626763f69eb15cc4ffcc9 = $(`<div id="html_0fbe05efcb1626763f69eb15cc4ffcc9" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>London Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 2<br>                     Total Patents: 59<br>                     Avg Patents: 29.5<br>                     Top Companies: Immunocore, Adaptimmune                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $1.8B<br>                     Avg Market Cap: $0.9B<br>                     Avg YTD Return: -31.8%                                      </div>                 </div>`)[0];
+                popup_1a208a10377d4b13661becdc3d87858b.setContent(html_0fbe05efcb1626763f69eb15cc4ffcc9);
+            
+        
+
+        circle_marker_e970829960a925a9759b9cfb82e1704e.bindPopup(popup_1a208a10377d4b13661becdc3d87858b)
+        ;
+
+        
+    
+    
+            var circle_marker_82a69fdb876d6a9b28cee0d4529913d7 = L.circleMarker(
+                [34.688585950000004, 135.5035402],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.605716622083237, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_e2bb2235b394d92145700121770c7f41 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8b84ab63344b30e896b77dfddb2b5db0 = $(`<div id="html_8b84ab63344b30e896b77dfddb2b5db0" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Osaka-Kobe Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 2<br>                     Total Patents: 85<br>                     Avg Patents: 42.6<br>                     Top Companies: Sumitomo Pharma, Shionogi                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $2040.7B<br>                     Avg Market Cap: $1020.4B<br>                     Avg YTD Return: 9.3%                                      </div>                 </div>`)[0];
+                popup_e2bb2235b394d92145700121770c7f41.setContent(html_8b84ab63344b30e896b77dfddb2b5db0);
+            
+        
+
+        circle_marker_82a69fdb876d6a9b28cee0d4529913d7.bindPopup(popup_e2bb2235b394d92145700121770c7f41)
+        ;
+
+        
+    
+    
+            var circle_marker_916f17624d8e48394a007bac9afc854f = L.circleMarker(
+                [53.33668913333333, -6.2484145],
+                {"bubblingMouseEvents": true, "color": "#FFB3BA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFB3BA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.40817413362733, "stroke": true, "weight": 2}
+            ).addTo(feature_group_042f253077960b6aadca208db3c7ab9c);
+        
+    
+        var popup_fab539888d76f7a5bce40d6fbaf3eefc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9e7180a16330bcf322b1576022a91554 = $(`<div id="html_9e7180a16330bcf322b1576022a91554" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Dublin Bio Cluster</h3>                     <strong>Cancer</strong><br>                     Companies: 3<br>                     Total Patents: 18<br>                     Avg Patents: 6.0<br>                     Top Companies: Jazz Pharmaceuticals, Horizon Therapeutics, Perrigo                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $161.8B<br>                     Avg Market Cap: $53.9B<br>                     Avg YTD Return: -6.1%                                      </div>                 </div>`)[0];
+                popup_fab539888d76f7a5bce40d6fbaf3eefc.setContent(html_9e7180a16330bcf322b1576022a91554);
+            
+        
+
+        circle_marker_916f17624d8e48394a007bac9afc854f.bindPopup(popup_fab539888d76f7a5bce40d6fbaf3eefc)
+        ;
+
+        
+    
+    
+            feature_group_042f253077960b6aadca208db3c7ab9c.addTo(map_284a9bcc53bd7b216fe32c29973840a9);
+        
+    
+            var feature_group_346b0f8218f5d791cc28a0457424db9a = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_59160986fae2b51cc79fecb2e64e5abd = L.circleMarker(
+                [40.588422300000005, -74.35710515],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.799210540641912, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_d5629488af28c9f7739ac4e8829e0fdf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8919466f028191ce115fbd05e24bb6a1 = $(`<div id="html_8919466f028191ce115fbd05e24bb6a1" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>New Jersey Bio Cluster</h3>                     <strong>Immunology</strong><br>                     Companies: 2<br>                     Total Patents: 19<br>                     Avg Patents: 9.5<br>                     Top Companies: Johnson & Johnson, Merck & Co.                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $629.1B<br>                     Avg Market Cap: $314.5B<br>                     Avg YTD Return: -4.4%                                      </div>                 </div>`)[0];
+                popup_d5629488af28c9f7739ac4e8829e0fdf.setContent(html_8919466f028191ce115fbd05e24bb6a1);
+            
+        
+
+        circle_marker_59160986fae2b51cc79fecb2e64e5abd.bindPopup(popup_d5629488af28c9f7739ac4e8829e0fdf)
+        ;
+
+        
+    
+    
+            var circle_marker_0946041239cabc465191e5d01d26723a = L.circleMarker(
+                [47.55891433333334, 7.595564499999999],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.296157859593746, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_b11f6d825ef04438b005052ab5b6798e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_805ba0866314250c62c193c3d0329466 = $(`<div id="html_805ba0866314250c62c193c3d0329466" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Basel Bio Cluster</h3>                     <strong>Immunology</strong><br>                     Companies: 3<br>                     Total Patents: 74<br>                     Avg Patents: 24.7<br>                     Top Companies: Novartis, Roche, Lonza Group                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $453.1B<br>                     Avg Market Cap: $151.0B<br>                     Avg YTD Return: 18.6%                                      </div>                 </div>`)[0];
+                popup_b11f6d825ef04438b005052ab5b6798e.setContent(html_805ba0866314250c62c193c3d0329466);
+            
+        
+
+        circle_marker_0946041239cabc465191e5d01d26723a.bindPopup(popup_b11f6d825ef04438b005052ab5b6798e)
+        ;
+
+        
+    
+    
+            var circle_marker_392361e4f44cf677bd0106583c33a077 = L.circleMarker(
+                [48.873677900000004, 2.27015175],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.679033053472697, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_24893c4e31aa1a0eb915af86b2a6086a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6af71e40b357eb77f7ee51987b127472 = $(`<div id="html_6af71e40b357eb77f7ee51987b127472" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Paris Bio Cluster</h3>                     <strong>Immunology</strong><br>                     Companies: 2<br>                     Total Patents: 8<br>                     Avg Patents: 4.0<br>                     Top Companies: Sanofi, Servier                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $122.1B<br>                     Avg Market Cap: $122.1B<br>                     Avg YTD Return: 0.7%                                      </div>                 </div>`)[0];
+                popup_24893c4e31aa1a0eb915af86b2a6086a.setContent(html_6af71e40b357eb77f7ee51987b127472);
+            
+        
+
+        circle_marker_392361e4f44cf677bd0106583c33a077.bindPopup(popup_24893c4e31aa1a0eb915af86b2a6086a)
+        ;
+
+        
+    
+    
+            var circle_marker_b751867f2b1a89cee16d85e6220c3a89 = L.circleMarker(
+                [35.6861873, 139.775798925],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.838945430607932, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_62d8e170272d13ae39752cc8a381b3af = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83532adc92ea7e8ab2bc1afc7293ea1f = $(`<div id="html_83532adc92ea7e8ab2bc1afc7293ea1f" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Tokyo-Yokohama Bio Cluster</h3>                     <strong>Immunology</strong><br>                     Companies: 4<br>                     Total Patents: 72<br>                     Avg Patents: 18.0<br>                     Top Companies: Takeda Pharmaceuticals, Daiichi Sankyo, Chugai Pharmaceutical                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $11046.6B<br>                     Avg Market Cap: $2761.6B<br>                     Avg YTD Return: 3.3%                                      </div>                 </div>`)[0];
+                popup_62d8e170272d13ae39752cc8a381b3af.setContent(html_83532adc92ea7e8ab2bc1afc7293ea1f);
+            
+        
+
+        circle_marker_b751867f2b1a89cee16d85e6220c3a89.bindPopup(popup_62d8e170272d13ae39752cc8a381b3af)
+        ;
+
+        
+    
+    
+            var circle_marker_5a3ada0241d268be1d2fd5d399355c27 = L.circleMarker(
+                [37.60642668, -122.32824574000001],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.194186632943637, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_79c19c0787c2174c22ddf5fc258b77f5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9c5ac4c289285153e9d6cddf53818ba7 = $(`<div id="html_9c5ac4c289285153e9d6cddf53818ba7" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Bay Area Bio Hub</h3>                     <strong>Immunology</strong><br>                     Companies: 5<br>                     Total Patents: 124<br>                     Avg Patents: 24.8<br>                     Top Companies: Gilead Sciences, Allogene Therapeutics, Nkarta                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $114.8B<br>                     Avg Market Cap: $23.0B<br>                     Avg YTD Return: -8.5%                                      </div>                 </div>`)[0];
+                popup_79c19c0787c2174c22ddf5fc258b77f5.setContent(html_9c5ac4c289285153e9d6cddf53818ba7);
+            
+        
+
+        circle_marker_5a3ada0241d268be1d2fd5d399355c27.bindPopup(popup_79c19c0787c2174c22ddf5fc258b77f5)
+        ;
+
+        
+    
+    
+            var circle_marker_e1db20b743f0e67d955025ff88e73014 = L.circleMarker(
+                [49.983630649999995, 8.161405649999999],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.697222766350929, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_1bd1b9729a5495e057f50b898ac50eff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_baeebca2e7f1287003f191e985cfad6d = $(`<div id="html_baeebca2e7f1287003f191e985cfad6d" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Munich Bio Cluster</h3>                     <strong>Immunology</strong><br>                     Companies: 2<br>                     Total Patents: 27<br>                     Avg Patents: 13.5<br>                     Top Companies: BioNTech, Boehringer Ingelheim                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $28.4B<br>                     Avg Market Cap: $28.4B<br>                     Avg YTD Return: 5.5%                                      </div>                 </div>`)[0];
+                popup_1bd1b9729a5495e057f50b898ac50eff.setContent(html_baeebca2e7f1287003f191e985cfad6d);
+            
+        
+
+        circle_marker_e1db20b743f0e67d955025ff88e73014.bindPopup(popup_1bd1b9729a5495e057f50b898ac50eff)
+        ;
+
+        
+    
+    
+            var circle_marker_9d01b6485d8b340dd0b0848cfa0eca22 = L.circleMarker(
+                [51.625579099999996, -1.2953887499999999],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.081293163956259, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_a10fdd6e1063e5f82e72cc894e4ae325 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e9342ae71b0ce2f192a90150fa25fb53 = $(`<div id="html_e9342ae71b0ce2f192a90150fa25fb53" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>London Bio Cluster</h3>                     <strong>Immunology</strong><br>                     Companies: 2<br>                     Total Patents: 21<br>                     Avg Patents: 10.5<br>                     Top Companies: Adaptimmune, Immunocore                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $1.8B<br>                     Avg Market Cap: $0.9B<br>                     Avg YTD Return: -31.8%                                      </div>                 </div>`)[0];
+                popup_a10fdd6e1063e5f82e72cc894e4ae325.setContent(html_e9342ae71b0ce2f192a90150fa25fb53);
+            
+        
+
+        circle_marker_9d01b6485d8b340dd0b0848cfa0eca22.bindPopup(popup_a10fdd6e1063e5f82e72cc894e4ae325)
+        ;
+
+        
+    
+    
+            var circle_marker_5897c9dcd875e950cb7e73f287b20bdd = L.circleMarker(
+                [42.362917374999995, -71.090362175],
+                {"bubblingMouseEvents": true, "color": "#BAFFC9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAFFC9", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.077941435532154, "stroke": true, "weight": 2}
+            ).addTo(feature_group_346b0f8218f5d791cc28a0457424db9a);
+        
+    
+        var popup_19a6e396d318a7f1ad59b2f65afe56d5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc01c508e1d0fb891ace238233e01eb5 = $(`<div id="html_bc01c508e1d0fb891ace238233e01eb5" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Boston-Cambridge Bio Cluster</h3>                     <strong>Immunology</strong><br>                     Companies: 4<br>                     Total Patents: 48<br>                     Avg Patents: 12.0<br>                     Top Companies: Intellia Therapeutics, Editas Medicine, Beam Therapeutics                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $3.9B<br>                     Avg Market Cap: $1.0B<br>                     Avg YTD Return: -52.7%                                      </div>                 </div>`)[0];
+                popup_19a6e396d318a7f1ad59b2f65afe56d5.setContent(html_bc01c508e1d0fb891ace238233e01eb5);
+            
+        
+
+        circle_marker_5897c9dcd875e950cb7e73f287b20bdd.bindPopup(popup_19a6e396d318a7f1ad59b2f65afe56d5)
+        ;
+
+        
+    
+    
+            feature_group_346b0f8218f5d791cc28a0457424db9a.addTo(map_284a9bcc53bd7b216fe32c29973840a9);
+        
+    
+            var feature_group_08fc6e483584e6ed5759e72caac234d3 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_533fc2a446f729945315694a852a3fde = L.circleMarker(
+                [40.588422300000005, -74.35710515],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.799210540641912, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_024b237ca372f29e6725458a521f5fd8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d28048bfedd2f93e09403a9a08a9b67b = $(`<div id="html_d28048bfedd2f93e09403a9a08a9b67b" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>New Jersey Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 71<br>                     Avg Patents: 35.5<br>                     Top Companies: Johnson & Johnson, Merck & Co.                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $629.1B<br>                     Avg Market Cap: $314.5B<br>                     Avg YTD Return: -4.4%                                      </div>                 </div>`)[0];
+                popup_024b237ca372f29e6725458a521f5fd8.setContent(html_d28048bfedd2f93e09403a9a08a9b67b);
+            
+        
+
+        circle_marker_533fc2a446f729945315694a852a3fde.bindPopup(popup_024b237ca372f29e6725458a521f5fd8)
+        ;
+
+        
+    
+    
+            var circle_marker_878206173d83009fde6fe755c68db912 = L.circleMarker(
+                [47.55891433333334, 7.595564499999999],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.296157859593746, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_07f5755c45fb627bdc8af9529084c1a5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e8263db288475ed3324b9afdcaafb0c4 = $(`<div id="html_e8263db288475ed3324b9afdcaafb0c4" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Basel Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 3<br>                     Total Patents: 133<br>                     Avg Patents: 44.3<br>                     Top Companies: Novartis, Roche, Lonza Group                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $453.1B<br>                     Avg Market Cap: $151.0B<br>                     Avg YTD Return: 18.6%                                      </div>                 </div>`)[0];
+                popup_07f5755c45fb627bdc8af9529084c1a5.setContent(html_e8263db288475ed3324b9afdcaafb0c4);
+            
+        
+
+        circle_marker_878206173d83009fde6fe755c68db912.bindPopup(popup_07f5755c45fb627bdc8af9529084c1a5)
+        ;
+
+        
+    
+    
+            var circle_marker_c3489cbbc35c323b189476512d67a62f = L.circleMarker(
+                [48.8497969, 2.27320525],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.72775299305483, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_20e72a1a3dff0db6a786739f7ecf72ce = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_60250e350098bb6f6898a4bda0d3c080 = $(`<div id="html_60250e350098bb6f6898a4bda0d3c080" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Paris Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 35<br>                     Avg Patents: 17.5<br>                     Top Companies: Sanofi, Ipsen                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $131.2B<br>                     Avg Market Cap: $65.6B<br>                     Avg YTD Return: 1.1%                                      </div>                 </div>`)[0];
+                popup_20e72a1a3dff0db6a786739f7ecf72ce.setContent(html_60250e350098bb6f6898a4bda0d3c080);
+            
+        
+
+        circle_marker_c3489cbbc35c323b189476512d67a62f.bindPopup(popup_20e72a1a3dff0db6a786739f7ecf72ce)
+        ;
+
+        
+    
+    
+            var circle_marker_2e404ce4ebfc139df9e6da3c15e8a4e2 = L.circleMarker(
+                [35.6913697, 139.76841288333335],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.78056967174911, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_b4890b74be47852f87e1b2a0a0491684 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fc44a99ba6e9812f215e88c67de1ae48 = $(`<div id="html_fc44a99ba6e9812f215e88c67de1ae48" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Tokyo-Yokohama Bio Hub</h3>                     <strong>Cell Gene</strong><br>                     Companies: 6<br>                     Total Patents: 238<br>                     Avg Patents: 39.8<br>                     Top Companies: Daiichi Sankyo, Takeda Pharmaceuticals, Chugai Pharmaceutical                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $13654.3B<br>                     Avg Market Cap: $2275.7B<br>                     Avg YTD Return: -2.9%                                      </div>                 </div>`)[0];
+                popup_b4890b74be47852f87e1b2a0a0491684.setContent(html_fc44a99ba6e9812f215e88c67de1ae48);
+            
+        
+
+        circle_marker_2e404ce4ebfc139df9e6da3c15e8a4e2.bindPopup(popup_b4890b74be47852f87e1b2a0a0491684)
+        ;
+
+        
+    
+    
+            var circle_marker_b70850399b6ecac29570ef501ef6117b = L.circleMarker(
+                [37.60642668, -122.32824574000001],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.194186632943637, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_e544ea5a6073dae55172e0af7b73c019 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5102ddef35d7d52e56d038b7efc9776d = $(`<div id="html_5102ddef35d7d52e56d038b7efc9776d" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Bay Area Bio Hub</h3>                     <strong>Cell Gene</strong><br>                     Companies: 5<br>                     Total Patents: 51<br>                     Avg Patents: 10.2<br>                     Top Companies: Gilead Sciences, Allogene Therapeutics, Adicet Bio                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $114.8B<br>                     Avg Market Cap: $23.0B<br>                     Avg YTD Return: -8.5%                                      </div>                 </div>`)[0];
+                popup_e544ea5a6073dae55172e0af7b73c019.setContent(html_5102ddef35d7d52e56d038b7efc9776d);
+            
+        
+
+        circle_marker_b70850399b6ecac29570ef501ef6117b.bindPopup(popup_e544ea5a6073dae55172e0af7b73c019)
+        ;
+
+        
+    
+    
+            var circle_marker_503b13a5b72b12fdef681dbfa520019e = L.circleMarker(
+                [49.983630649999995, 8.161405649999999],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.697222766350929, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_f039964d2aebf2375817de919db8b930 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_079ed74a3d8d99fcc1ec149aae823ef2 = $(`<div id="html_079ed74a3d8d99fcc1ec149aae823ef2" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Munich Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 90<br>                     Avg Patents: 45.0<br>                     Top Companies: Boehringer Ingelheim, BioNTech                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $28.4B<br>                     Avg Market Cap: $28.4B<br>                     Avg YTD Return: 5.5%                                      </div>                 </div>`)[0];
+                popup_f039964d2aebf2375817de919db8b930.setContent(html_079ed74a3d8d99fcc1ec149aae823ef2);
+            
+        
+
+        circle_marker_503b13a5b72b12fdef681dbfa520019e.bindPopup(popup_f039964d2aebf2375817de919db8b930)
+        ;
+
+        
+    
+    
+            var circle_marker_95f758e77fe3fcc0cda433e1f9b3e078 = L.circleMarker(
+                [55.710028199999996, 12.51150015],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.625888075905324, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_151d9cb57e6ec0092a7bf4a287c07109 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0f04a2cbd673d56abd625915e9b50857 = $(`<div id="html_0f04a2cbd673d56abd625915e9b50857" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Copenhagen Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 46<br>                     Avg Patents: 23.0<br>                     Top Companies: Novo Nordisk, Genmab                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $488.4B<br>                     Avg Market Cap: $244.2B<br>                     Avg YTD Return: -15.3%                                      </div>                 </div>`)[0];
+                popup_151d9cb57e6ec0092a7bf4a287c07109.setContent(html_0f04a2cbd673d56abd625915e9b50857);
+            
+        
+
+        circle_marker_95f758e77fe3fcc0cda433e1f9b3e078.bindPopup(popup_151d9cb57e6ec0092a7bf4a287c07109)
+        ;
+
+        
+    
+    
+            var circle_marker_68549cb35a0df80c78bd4058daa8e922 = L.circleMarker(
+                [42.3026991, -87.89414395],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.674956686645432, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_34c7d8da99ebe4a9af18ee281721dff4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0501191b8a6fa7ad9a8f5dc8af5fef90 = $(`<div id="html_0501191b8a6fa7ad9a8f5dc8af5fef90" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Chicago Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 4<br>                     Avg Patents: 2.0<br>                     Top Companies: AbbVie, Abbott                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $524.7B<br>                     Avg Market Cap: $262.4B<br>                     Avg YTD Return: 13.5%                                      </div>                 </div>`)[0];
+                popup_34c7d8da99ebe4a9af18ee281721dff4.setContent(html_0501191b8a6fa7ad9a8f5dc8af5fef90);
+            
+        
+
+        circle_marker_68549cb35a0df80c78bd4058daa8e922.bindPopup(popup_34c7d8da99ebe4a9af18ee281721dff4)
+        ;
+
+        
+    
+    
+            var circle_marker_ea4570bf1ecf826af10e80cb3922a357 = L.circleMarker(
+                [42.37242846, -71.09670322],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.170329119314285, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_c1d9a26befe2b1cc290d89a20ef2d7d3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2dd073f1f3894e01fa84656cf65af545 = $(`<div id="html_2dd073f1f3894e01fa84656cf65af545" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Boston-Cambridge Bio Hub</h3>                     <strong>Cell Gene</strong><br>                     Companies: 10<br>                     Total Patents: 454<br>                     Avg Patents: 45.4<br>                     Top Companies: Intellia Therapeutics, Alnylam Pharmaceuticals, Moderna                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $401.8B<br>                     Avg Market Cap: $44.6B<br>                     Avg YTD Return: -30.2%                                      </div>                 </div>`)[0];
+                popup_c1d9a26befe2b1cc290d89a20ef2d7d3.setContent(html_2dd073f1f3894e01fa84656cf65af545);
+            
+        
+
+        circle_marker_ea4570bf1ecf826af10e80cb3922a357.bindPopup(popup_c1d9a26befe2b1cc290d89a20ef2d7d3)
+        ;
+
+        
+    
+    
+            var circle_marker_93e6a863119a82da771e5815aee777f6 = L.circleMarker(
+                [32.9195836, -117.16754409999999],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.7691273049062297, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_fe604ef0025689ad8e10a772995f2246 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a8fb5aff8e0bd01fea625321444ba85e = $(`<div id="html_a8fb5aff8e0bd01fea625321444ba85e" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>San Diego Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 52<br>                     Avg Patents: 26.0<br>                     Top Companies: Arcturus Therapeutics, Fate Therapeutics                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $0.8B<br>                     Avg Market Cap: $0.4B<br>                     Avg YTD Return: -38.1%                                      </div>                 </div>`)[0];
+                popup_fe604ef0025689ad8e10a772995f2246.setContent(html_a8fb5aff8e0bd01fea625321444ba85e);
+            
+        
+
+        circle_marker_93e6a863119a82da771e5815aee777f6.bindPopup(popup_fe604ef0025689ad8e10a772995f2246)
+        ;
+
+        
+    
+    
+            var circle_marker_52cb7edbee5ba23ce5bc36d5c30c67ca = L.circleMarker(
+                [51.625579099999996, -1.2953887499999999],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.081293163956259, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_1f8fed444c34eab04359286e36aff6e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_70ccd41a579698f83deaa7127bd153cb = $(`<div id="html_70ccd41a579698f83deaa7127bd153cb" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>London Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 7<br>                     Avg Patents: 3.5<br>                     Top Companies: Immunocore, Adaptimmune                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $1.8B<br>                     Avg Market Cap: $0.9B<br>                     Avg YTD Return: -31.8%                                      </div>                 </div>`)[0];
+                popup_1f8fed444c34eab04359286e36aff6e2.setContent(html_70ccd41a579698f83deaa7127bd153cb);
+            
+        
+
+        circle_marker_52cb7edbee5ba23ce5bc36d5c30c67ca.bindPopup(popup_1f8fed444c34eab04359286e36aff6e2)
+        ;
+
+        
+    
+    
+            var circle_marker_2e87ab34cf116a48d7995e9773bf62e7 = L.circleMarker(
+                [34.688585950000004, 135.5035402],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.605716622083237, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_ede65ec32f7fceb06fd49b1ae6bd5bd3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c3667542ae2f971161c0d60a22b7ad00 = $(`<div id="html_c3667542ae2f971161c0d60a22b7ad00" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Osaka-Kobe Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 15<br>                     Avg Patents: 7.8<br>                     Top Companies: Sumitomo Pharma, Shionogi                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $2040.7B<br>                     Avg Market Cap: $1020.4B<br>                     Avg YTD Return: 9.3%                                      </div>                 </div>`)[0];
+                popup_ede65ec32f7fceb06fd49b1ae6bd5bd3.setContent(html_c3667542ae2f971161c0d60a22b7ad00);
+            
+        
+
+        circle_marker_2e87ab34cf116a48d7995e9773bf62e7.bindPopup(popup_ede65ec32f7fceb06fd49b1ae6bd5bd3)
+        ;
+
+        
+    
+    
+            var circle_marker_ebfb6888a52cea6662478c3b94473eab = L.circleMarker(
+                [31.284821, 121.531838],
+                {"bubblingMouseEvents": true, "color": "#BAE1FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BAE1FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.8286534283452385, "stroke": true, "weight": 2}
+            ).addTo(feature_group_08fc6e483584e6ed5759e72caac234d3);
+        
+    
+        var popup_02a8dddec1dbadd2bd85f5d7b1405b52 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc8425369b453f08e2c16faf32072ad5 = $(`<div id="html_bc8425369b453f08e2c16faf32072ad5" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Shanghai-Suzhou Bio Cluster</h3>                     <strong>Cell Gene</strong><br>                     Companies: 2<br>                     Total Patents: 6<br>                     Avg Patents: 3.0<br>                     Top Companies: Shanghai Pharmaceutical, WuXi AppTec                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $152.1B<br>                     Avg Market Cap: $76.0B<br>                     Avg YTD Return: -8.8%                                      </div>                 </div>`)[0];
+                popup_02a8dddec1dbadd2bd85f5d7b1405b52.setContent(html_bc8425369b453f08e2c16faf32072ad5);
+            
+        
+
+        circle_marker_ebfb6888a52cea6662478c3b94473eab.bindPopup(popup_02a8dddec1dbadd2bd85f5d7b1405b52)
+        ;
+
+        
+    
+    
+            feature_group_08fc6e483584e6ed5759e72caac234d3.addTo(map_284a9bcc53bd7b216fe32c29973840a9);
+        
+    
+            var feature_group_b502cd709ef8a4667108c1422ec79783 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_1e6aa03e965986c3436cbcba92809ce3 = L.circleMarker(
+                [40.568259633333334, -74.4204879],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.594670362793645, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_9904c1ed8d86d201f102d05aef5bac86 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fab34655237a23737ba1c868bab6d85a = $(`<div id="html_fab34655237a23737ba1c868bab6d85a" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>New Jersey Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 3<br>                     Total Patents: 176<br>                     Avg Patents: 58.7<br>                     Top Companies: Johnson & Johnson, Merck & Co., Catalent                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $640.1B<br>                     Avg Market Cap: $213.4B<br>                     Avg YTD Return: 8.7%                                      </div>                 </div>`)[0];
+                popup_9904c1ed8d86d201f102d05aef5bac86.setContent(html_fab34655237a23737ba1c868bab6d85a);
+            
+        
+
+        circle_marker_1e6aa03e965986c3436cbcba92809ce3.bindPopup(popup_9904c1ed8d86d201f102d05aef5bac86)
+        ;
+
+        
+    
+    
+            var circle_marker_2be0e5976a643b6975248f3c55fcc832 = L.circleMarker(
+                [47.55891433333334, 7.595564499999999],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.296157859593746, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_bac1262515b611b1f00f0aa71acdd6b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_13a3dc21309c9a54343b8284db356762 = $(`<div id="html_13a3dc21309c9a54343b8284db356762" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Basel Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 3<br>                     Total Patents: 163<br>                     Avg Patents: 54.3<br>                     Top Companies: Roche, Novartis, Lonza Group                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $453.1B<br>                     Avg Market Cap: $151.0B<br>                     Avg YTD Return: 18.6%                                      </div>                 </div>`)[0];
+                popup_bac1262515b611b1f00f0aa71acdd6b4.setContent(html_13a3dc21309c9a54343b8284db356762);
+            
+        
+
+        circle_marker_2be0e5976a643b6975248f3c55fcc832.bindPopup(popup_bac1262515b611b1f00f0aa71acdd6b4)
+        ;
+
+        
+    
+    
+            var circle_marker_5c09d0747f71708926a05e6f91f7bfeb = L.circleMarker(
+                [48.85777780000001, 2.257951766666667],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.227619568852525, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_4415b68c7d5be794413e0b7431805f33 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c3868ecf2825bb0d18019a60b7d352b1 = $(`<div id="html_c3868ecf2825bb0d18019a60b7d352b1" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Paris Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 3<br>                     Total Patents: 104<br>                     Avg Patents: 34.7<br>                     Top Companies: Sanofi, Ipsen, Servier                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $131.2B<br>                     Avg Market Cap: $65.6B<br>                     Avg YTD Return: 1.1%                                      </div>                 </div>`)[0];
+                popup_4415b68c7d5be794413e0b7431805f33.setContent(html_c3868ecf2825bb0d18019a60b7d352b1);
+            
+        
+
+        circle_marker_5c09d0747f71708926a05e6f91f7bfeb.bindPopup(popup_4415b68c7d5be794413e0b7431805f33)
+        ;
+
+        
+    
+    
+            var circle_marker_2b5b43f29c4f6c75e1b3d0ab5da719fe = L.circleMarker(
+                [35.6913697, 139.76841288333335],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.78056967174911, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_e97a654eedcd1febb2dcb0e53696802b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2a5eb29ba55bdead2b1cfd34aa17ff22 = $(`<div id="html_2a5eb29ba55bdead2b1cfd34aa17ff22" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Tokyo-Yokohama Bio Hub</h3>                     <strong>Biologics</strong><br>                     Companies: 6<br>                     Total Patents: 150<br>                     Avg Patents: 25.0<br>                     Top Companies: Chugai Pharmaceutical, Takeda Pharmaceuticals, Daiichi Sankyo                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $13654.3B<br>                     Avg Market Cap: $2275.7B<br>                     Avg YTD Return: -2.9%                                      </div>                 </div>`)[0];
+                popup_e97a654eedcd1febb2dcb0e53696802b.setContent(html_2a5eb29ba55bdead2b1cfd34aa17ff22);
+            
+        
+
+        circle_marker_2b5b43f29c4f6c75e1b3d0ab5da719fe.bindPopup(popup_e97a654eedcd1febb2dcb0e53696802b)
+        ;
+
+        
+    
+    
+            var circle_marker_13b096605858c90133046f2a5ad38665 = L.circleMarker(
+                [37.60642668, -122.32824574000001],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.194186632943637, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_ea68d2eefef7acdfa9ec33fe5873a16d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_93d904446419fe04ad48ad7ccc2825ff = $(`<div id="html_93d904446419fe04ad48ad7ccc2825ff" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Bay Area Bio Hub</h3>                     <strong>Biologics</strong><br>                     Companies: 5<br>                     Total Patents: 75<br>                     Avg Patents: 15.0<br>                     Top Companies: Gilead Sciences, Allogene Therapeutics, Nkarta                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $114.8B<br>                     Avg Market Cap: $23.0B<br>                     Avg YTD Return: -8.5%                                      </div>                 </div>`)[0];
+                popup_ea68d2eefef7acdfa9ec33fe5873a16d.setContent(html_93d904446419fe04ad48ad7ccc2825ff);
+            
+        
+
+        circle_marker_13b096605858c90133046f2a5ad38665.bindPopup(popup_ea68d2eefef7acdfa9ec33fe5873a16d)
+        ;
+
+        
+    
+    
+            var circle_marker_fac3e29287c31ff6c418aa4f3b6b3bf0 = L.circleMarker(
+                [49.983630649999995, 8.161405649999999],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.697222766350929, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_3d838c86f6082c5c30cf1d6a30373c81 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_35f05a4e3d193f0f5163fcc0c980f27b = $(`<div id="html_35f05a4e3d193f0f5163fcc0c980f27b" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Munich Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 2<br>                     Total Patents: 100<br>                     Avg Patents: 50.0<br>                     Top Companies: BioNTech, Boehringer Ingelheim                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $28.4B<br>                     Avg Market Cap: $28.4B<br>                     Avg YTD Return: 5.5%                                      </div>                 </div>`)[0];
+                popup_3d838c86f6082c5c30cf1d6a30373c81.setContent(html_35f05a4e3d193f0f5163fcc0c980f27b);
+            
+        
+
+        circle_marker_fac3e29287c31ff6c418aa4f3b6b3bf0.bindPopup(popup_3d838c86f6082c5c30cf1d6a30373c81)
+        ;
+
+        
+    
+    
+            var circle_marker_b1ac63d12df4eb98624cf8af4ee53de8 = L.circleMarker(
+                [55.710028199999996, 12.51150015],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.625888075905324, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_2bce435bd0b9e47a478fe620e2fea303 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c169bd102335d4ce04d39d26016e2db1 = $(`<div id="html_c169bd102335d4ce04d39d26016e2db1" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Copenhagen Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 2<br>                     Total Patents: 42<br>                     Avg Patents: 21.0<br>                     Top Companies: Novo Nordisk, Genmab                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $488.4B<br>                     Avg Market Cap: $244.2B<br>                     Avg YTD Return: -15.3%                                      </div>                 </div>`)[0];
+                popup_2bce435bd0b9e47a478fe620e2fea303.setContent(html_c169bd102335d4ce04d39d26016e2db1);
+            
+        
+
+        circle_marker_b1ac63d12df4eb98624cf8af4ee53de8.bindPopup(popup_2bce435bd0b9e47a478fe620e2fea303)
+        ;
+
+        
+    
+    
+            var circle_marker_a7d76d06d90db1409ac2393318772013 = L.circleMarker(
+                [42.3026991, -87.89414395],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.674956686645432, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_1dd9b0df7699b6940c8fbed6f3e790c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f173eb1ce631f0fafeca988c8d9e5445 = $(`<div id="html_f173eb1ce631f0fafeca988c8d9e5445" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Chicago Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 2<br>                     Total Patents: 19<br>                     Avg Patents: 9.5<br>                     Top Companies: AbbVie, Abbott                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $524.7B<br>                     Avg Market Cap: $262.4B<br>                     Avg YTD Return: 13.5%                                      </div>                 </div>`)[0];
+                popup_1dd9b0df7699b6940c8fbed6f3e790c0.setContent(html_f173eb1ce631f0fafeca988c8d9e5445);
+            
+        
+
+        circle_marker_a7d76d06d90db1409ac2393318772013.bindPopup(popup_1dd9b0df7699b6940c8fbed6f3e790c0)
+        ;
+
+        
+    
+    
+            var circle_marker_8b45ede36aa7798bccffaadb92724100 = L.circleMarker(
+                [42.372961010000004, -71.09984827],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.248264350713088, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_3eabbc327526a211c461cf492294dd86 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_39ce7149f5bee184818f919ceaded44f = $(`<div id="html_39ce7149f5bee184818f919ceaded44f" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Boston-Cambridge Bio Hub</h3>                     <strong>Biologics</strong><br>                     Companies: 10<br>                     Total Patents: 99<br>                     Avg Patents: 9.9<br>                     Top Companies: Alexion Pharmaceuticals, Moderna, Beam Therapeutics                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $423.3B<br>                     Avg Market Cap: $47.0B<br>                     Avg YTD Return: -20.6%                                      </div>                 </div>`)[0];
+                popup_3eabbc327526a211c461cf492294dd86.setContent(html_39ce7149f5bee184818f919ceaded44f);
+            
+        
+
+        circle_marker_8b45ede36aa7798bccffaadb92724100.bindPopup(popup_3eabbc327526a211c461cf492294dd86)
+        ;
+
+        
+    
+    
+            var circle_marker_d560072c6214303eca13aaf36e0065f0 = L.circleMarker(
+                [32.9195836, -117.16754409999999],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.7691273049062297, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_9c7f4bac13452d05171205fb8c33caab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_924b2b06350dfd984cab985c5b7861ae = $(`<div id="html_924b2b06350dfd984cab985c5b7861ae" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>San Diego Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 2<br>                     Total Patents: 16<br>                     Avg Patents: 8.0<br>                     Top Companies: Fate Therapeutics, Arcturus Therapeutics                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $0.8B<br>                     Avg Market Cap: $0.4B<br>                     Avg YTD Return: -38.1%                                      </div>                 </div>`)[0];
+                popup_9c7f4bac13452d05171205fb8c33caab.setContent(html_924b2b06350dfd984cab985c5b7861ae);
+            
+        
+
+        circle_marker_d560072c6214303eca13aaf36e0065f0.bindPopup(popup_9c7f4bac13452d05171205fb8c33caab)
+        ;
+
+        
+    
+    
+            var circle_marker_8db72ffcb4a2abaa848d3a9325b48cca = L.circleMarker(
+                [51.625579099999996, -1.2953887499999999],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.081293163956259, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_024da5a0d40ee6c23303e16dbb476cfb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5d4e08458042649300fd4f1c1fc9859d = $(`<div id="html_5d4e08458042649300fd4f1c1fc9859d" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>London Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 2<br>                     Total Patents: 52<br>                     Avg Patents: 26.0<br>                     Top Companies: Immunocore, Adaptimmune                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $1.8B<br>                     Avg Market Cap: $0.9B<br>                     Avg YTD Return: -31.8%                                      </div>                 </div>`)[0];
+                popup_024da5a0d40ee6c23303e16dbb476cfb.setContent(html_5d4e08458042649300fd4f1c1fc9859d);
+            
+        
+
+        circle_marker_8db72ffcb4a2abaa848d3a9325b48cca.bindPopup(popup_024da5a0d40ee6c23303e16dbb476cfb)
+        ;
+
+        
+    
+    
+            var circle_marker_a8767f4227bd43433eaf42d26d40e707 = L.circleMarker(
+                [34.688585950000004, 135.5035402],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.605716622083237, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_2a9d0bfb4563031c15707ea138761078 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8697665e3abdf1fd550eb05a06e9d808 = $(`<div id="html_8697665e3abdf1fd550eb05a06e9d808" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Osaka-Kobe Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 2<br>                     Total Patents: 20<br>                     Avg Patents: 10.2<br>                     Top Companies: Sumitomo Pharma, Shionogi                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $2040.7B<br>                     Avg Market Cap: $1020.4B<br>                     Avg YTD Return: 9.3%                                      </div>                 </div>`)[0];
+                popup_2a9d0bfb4563031c15707ea138761078.setContent(html_8697665e3abdf1fd550eb05a06e9d808);
+            
+        
+
+        circle_marker_a8767f4227bd43433eaf42d26d40e707.bindPopup(popup_2a9d0bfb4563031c15707ea138761078)
+        ;
+
+        
+    
+    
+            var circle_marker_aa52be9f42c9ec60e1e3793e460390e9 = L.circleMarker(
+                [53.338486950000004, -6.25083345],
+                {"bubblingMouseEvents": true, "color": "#FFFFBA", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFBA", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.838838763122108, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b502cd709ef8a4667108c1422ec79783);
+        
+    
+        var popup_cb1cee91a46afcdf073cbbe19b36f224 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0328892b273b4c3d453ed7c5a73bffc = $(`<div id="html_a0328892b273b4c3d453ed7c5a73bffc" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Dublin Bio Cluster</h3>                     <strong>Biologics</strong><br>                     Companies: 2<br>                     Total Patents: 3<br>                     Avg Patents: 1.5<br>                     Top Companies: Horizon Therapeutics, Perrigo                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $154.4B<br>                     Avg Market Cap: $77.2B<br>                     Avg YTD Return: -7.5%                                      </div>                 </div>`)[0];
+                popup_cb1cee91a46afcdf073cbbe19b36f224.setContent(html_a0328892b273b4c3d453ed7c5a73bffc);
+            
+        
+
+        circle_marker_aa52be9f42c9ec60e1e3793e460390e9.bindPopup(popup_cb1cee91a46afcdf073cbbe19b36f224)
+        ;
+
+        
+    
+    
+            feature_group_b502cd709ef8a4667108c1422ec79783.addTo(map_284a9bcc53bd7b216fe32c29973840a9);
+        
+    
+            var feature_group_3e92e6aa2296af4acedb4ccc9cb71b65 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_587621353bd28461e2216403b0b5886c = L.circleMarker(
+                [47.55891433333334, 7.595564499999999],
+                {"bubblingMouseEvents": true, "color": "#E8BAFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8BAFF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.296157859593746, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3e92e6aa2296af4acedb4ccc9cb71b65);
+        
+    
+        var popup_a77a2768cbdf68ec9a27cdfe779c0231 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aa8e69e74d9e759170c0722e5db02841 = $(`<div id="html_aa8e69e74d9e759170c0722e5db02841" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Basel Bio Cluster</h3>                     <strong>Small Molecule</strong><br>                     Companies: 3<br>                     Total Patents: 15<br>                     Avg Patents: 5.0<br>                     Top Companies: Roche, Lonza Group, Novartis                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $453.1B<br>                     Avg Market Cap: $151.0B<br>                     Avg YTD Return: 18.6%                                      </div>                 </div>`)[0];
+                popup_a77a2768cbdf68ec9a27cdfe779c0231.setContent(html_aa8e69e74d9e759170c0722e5db02841);
+            
+        
+
+        circle_marker_587621353bd28461e2216403b0b5886c.bindPopup(popup_a77a2768cbdf68ec9a27cdfe779c0231)
+        ;
+
+        
+    
+    
+            var circle_marker_cac91c7bae8bc94d770f0311f7e8a1eb = L.circleMarker(
+                [37.6128224, -122.34087405],
+                {"bubblingMouseEvents": true, "color": "#E8BAFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8BAFF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.631919886822863, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3e92e6aa2296af4acedb4ccc9cb71b65);
+        
+    
+        var popup_2dc0550589029a63c4d2393ea0526b2b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c301fdb5391e0d443a5095420e9ac59c = $(`<div id="html_c301fdb5391e0d443a5095420e9ac59c" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Bay Area Bio Cluster</h3>                     <strong>Small Molecule</strong><br>                     Companies: 2<br>                     Total Patents: 3<br>                     Avg Patents: 1.5<br>                     Top Companies: Gilead Sciences, Atara Biotherapeutics                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $113.9B<br>                     Avg Market Cap: $57.0B<br>                     Avg YTD Return: 7.7%                                      </div>                 </div>`)[0];
+                popup_2dc0550589029a63c4d2393ea0526b2b.setContent(html_c301fdb5391e0d443a5095420e9ac59c);
+            
+        
+
+        circle_marker_cac91c7bae8bc94d770f0311f7e8a1eb.bindPopup(popup_2dc0550589029a63c4d2393ea0526b2b)
+        ;
+
+        
+    
+    
+            var circle_marker_776cc24420c42713ea7f2395475933e8 = L.circleMarker(
+                [42.3026991, -87.89414395],
+                {"bubblingMouseEvents": true, "color": "#E8BAFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8BAFF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.674956686645432, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3e92e6aa2296af4acedb4ccc9cb71b65);
+        
+    
+        var popup_bbb884dd028c0a0c7a66d4425f18d4fd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_effc85c96031ac3d423cd750ab3f1c3d = $(`<div id="html_effc85c96031ac3d423cd750ab3f1c3d" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Chicago Bio Cluster</h3>                     <strong>Small Molecule</strong><br>                     Companies: 2<br>                     Total Patents: 7<br>                     Avg Patents: 3.5<br>                     Top Companies: AbbVie, Abbott                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $524.7B<br>                     Avg Market Cap: $262.4B<br>                     Avg YTD Return: 13.5%                                      </div>                 </div>`)[0];
+                popup_bbb884dd028c0a0c7a66d4425f18d4fd.setContent(html_effc85c96031ac3d423cd750ab3f1c3d);
+            
+        
+
+        circle_marker_776cc24420c42713ea7f2395475933e8.bindPopup(popup_bbb884dd028c0a0c7a66d4425f18d4fd)
+        ;
+
+        
+    
+    
+            var circle_marker_399ef87fe3d73580c98a0a2f0d266291 = L.circleMarker(
+                [42.3613318, -71.06807796666668],
+                {"bubblingMouseEvents": true, "color": "#E8BAFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8BAFF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.361812648804964, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3e92e6aa2296af4acedb4ccc9cb71b65);
+        
+    
+        var popup_8bbc9eef9d938c57311e82d9927bff64 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_74a1e8e9bbea8579c6c38cfc6d78564a = $(`<div id="html_74a1e8e9bbea8579c6c38cfc6d78564a" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>Boston-Cambridge Bio Cluster</h3>                     <strong>Small Molecule</strong><br>                     Companies: 3<br>                     Total Patents: 9<br>                     Avg Patents: 3.0<br>                     Top Companies: Alnylam Pharmaceuticals, Sage Therapeutics, Vertex Pharmaceuticals                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $153.3B<br>                     Avg Market Cap: $51.1B<br>                     Avg YTD Return: -10.2%                                      </div>                 </div>`)[0];
+                popup_8bbc9eef9d938c57311e82d9927bff64.setContent(html_74a1e8e9bbea8579c6c38cfc6d78564a);
+            
+        
+
+        circle_marker_399ef87fe3d73580c98a0a2f0d266291.bindPopup(popup_8bbc9eef9d938c57311e82d9927bff64)
+        ;
+
+        
+    
+    
+            var circle_marker_cc3ad6e3b2408c00db11de48cc486432 = L.circleMarker(
+                [33.0463562, -117.24491495000001],
+                {"bubblingMouseEvents": true, "color": "#E8BAFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E8BAFF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.416158847259139, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3e92e6aa2296af4acedb4ccc9cb71b65);
+        
+    
+        var popup_f2e9054e03d0df5e52a4a0aacf3096d6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_02c5d2c72151bb9107fb78fb43ddc717 = $(`<div id="html_02c5d2c72151bb9107fb78fb43ddc717" style="width: 100.0%; height: 100.0%;">                 <div style='min-width: 300px'>                     <h3 style='margin:0 0 10px'>San Diego Bio Cluster</h3>                     <strong>Small Molecule</strong><br>                     Companies: 2<br>                     Total Patents: 2<br>                     Avg Patents: 1.0<br>                     Top Companies: Ionis Pharmaceuticals, Neurocrine Biosciences                                          <hr>                     <strong>Financial Metrics:</strong><br>                     Total Market Cap: $18.5B<br>                     Avg Market Cap: $9.3B<br>                     Avg YTD Return: -18.0%                                      </div>                 </div>`)[0];
+                popup_f2e9054e03d0df5e52a4a0aacf3096d6.setContent(html_02c5d2c72151bb9107fb78fb43ddc717);
+            
+        
+
+        circle_marker_cc3ad6e3b2408c00db11de48cc486432.bindPopup(popup_f2e9054e03d0df5e52a4a0aacf3096d6)
+        ;
+
+        
+    
+    
+            feature_group_3e92e6aa2296af4acedb4ccc9cb71b65.addTo(map_284a9bcc53bd7b216fe32c29973840a9);
+        
+    
+            var layer_control_46fc192fde434014e6b3d19335ac2033_layers = {
+                base_layers : {
+                    "cartodbdarkmatter" : tile_layer_0481ab0a558f4229b14f57273452d52b,
+                },
+                overlays :  {
+                    "Cancer" : feature_group_042f253077960b6aadca208db3c7ab9c,
+                    "Immunology" : feature_group_346b0f8218f5d791cc28a0457424db9a,
+                    "Cell Gene" : feature_group_08fc6e483584e6ed5759e72caac234d3,
+                    "Biologics" : feature_group_b502cd709ef8a4667108c1422ec79783,
+                    "Small Molecule" : feature_group_3e92e6aa2296af4acedb4ccc9cb71b65,
+                },
+            };
+            let layer_control_46fc192fde434014e6b3d19335ac2033 = L.control.layers(
+                layer_control_46fc192fde434014e6b3d19335ac2033_layers.base_layers,
+                layer_control_46fc192fde434014e6b3d19335ac2033_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_284a9bcc53bd7b216fe32c29973840a9);
+
+        
+</script>
+</html>
